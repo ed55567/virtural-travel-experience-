@@ -9,10 +9,12 @@ const CitySelection = ({ cities, onSelectCity }) => {
                 {cities.map(city => (
                     <li key={city.id} onClick={() => onSelectCity(city)
                     }>
+                      <img src={city.image} alt={city.name} />
                         {city.name}    
                     </li>
                 ))}
             </ul>
+            <input type="text" placeholder='Search cities'/>
         </div>
     );
 };
